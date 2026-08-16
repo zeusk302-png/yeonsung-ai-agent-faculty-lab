@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>오프라인 교육 플랫폼 열기</title>
+    <style>
+      :root { color-scheme: light; font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif; color: #19262d; background: #f7f5ef; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 32px; background: linear-gradient(135deg, #f7f5ef 0%, #eef7f7 100%); }
+      main { width: min(940px, 100%); background: #fffdf8; border: 1px solid #d9ddd9; box-shadow: 0 24px 70px rgba(18, 45, 57, .12); }
+      header { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 32px; border-top: 4px solid #1c2f3c; border-bottom: 1px solid #d9ddd9; }
+      header img { width: 180px; height: auto; }
+      header span { color: #465761; font-weight: 700; font-size: 14px; }
+      .body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 0; }
+      .copy { padding: 56px 48px; }
+      .kicker { color: #008eb2; font-weight: 800; letter-spacing: .06em; }
+      h1 { margin: 14px 0 16px; font-family: Georgia, "Noto Serif KR", serif; font-size: clamp(38px, 6vw, 66px); line-height: 1.06; letter-spacing: -.04em; }
+      p { color: #425761; font-size: 18px; line-height: 1.75; }
+      .rail { padding: 42px 32px; color: white; background: #173244; border-top: 5px solid #ff5d32; }
+      .rail h2 { margin: 0 0 24px; color: #68d2e8; font-size: 18px; }
+      ol { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+      li { counter-increment: step; display: grid; grid-template-columns: 32px 1fr; gap: 12px; padding: 18px 0; border-top: 1px solid rgba(255,255,255,.16); line-height: 1.55; }
+      li::before { content: "0" counter(step); display: grid; place-items: center; width: 28px; height: 28px; background: #ff5d32; font: 800 12px/1 Arial, sans-serif; }
+      a { display: inline-flex; align-items: center; gap: 18px; margin-top: 22px; padding: 16px 20px; color: white; background: #008eb2; text-decoration: none; font-weight: 800; }
+      a:focus-visible { outline: 3px solid #ffb000; outline-offset: 4px; }
+      small { display: block; margin-top: 18px; color: #6a7a82; line-height: 1.6; }
+      @media (max-width: 760px) { body { padding: 0; } main { min-height: 100vh; } header { padding: 20px; } header span { display: none; } .body { grid-template-columns: 1fr; } .copy { padding: 40px 24px; } .rail { padding: 32px 24px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./images/yeonsung-official-signature-kor-eng.png" alt="연성대학교 · YEONSUNG UNIVERSITY" />
+        <span>2026.08 교수역량강화 특강</span>
+      </header>
+      <div class="body">
+        <section class="copy">
+          <span class="kicker">오프라인에서 이용하기</span>
+          <h1>전용 압축파일을<br />먼저 풀어 주세요.</h1>
+          <p>GitHub Pages용 파일은 웹 주소에서 여는 방식입니다. 인터넷 없이 사용하려면 오프라인판을 내려받아 압축을 푼 뒤 그 안의 <strong>index.html</strong>을 여세요.</p>
+          <a href="./downloads/연성대학교_AI_Agent_교육플랫폼_오프라인_2026-08.zip" download>오프라인판 내려받기 <span aria-hidden="true">→</span></a>
+          <small>이미 오프라인판을 압축 해제했다면, 현재 파일이 아니라 압축을 푼 폴더 안의 index.html을 실행합니다.</small>
+        </section>
+        <aside class="rail" aria-label="오프라인판 실행 순서">
+          <h2>실행 순서</h2>
+          <ol>
+            <li>오프라인 ZIP 파일을 내려받습니다.</li>
+            <li>새 폴더에 압축을 완전히 풉니다.</li>
+            <li>압축을 푼 폴더의 index.html을 엽니다.</li>
+          </ol>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
